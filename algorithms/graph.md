@@ -1,7 +1,7 @@
-Graph
+==Graph==
 ==
 
-- Given a list of sorted words from an alien dictionary, find the order of the alphabet.
+- ==Given a list of sorted words from an alien dictionary, find the order of the alphabet==.
   - Alien Dictionary Topological Sort question.
 - Find if a given string matches any path in a labeled graph. A path may contain cycles.
 - Given a bipartite graph, separate the vertices into two sets.
