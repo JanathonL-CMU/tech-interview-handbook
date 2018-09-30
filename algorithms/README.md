@@ -29,38 +29,38 @@ If you are interested in how data structures are implemented, check out [Lago](h
 
 ## General Tips
 
-Clarify any assumptions you made subconsciously. Many questions are under-specified on purpose.
+==Clarify any assumptions you made subconsciously==. Many questions are under-specified on purpose.
 
-Always validate input first. Check for invalid/empty/negative/different type input. Never assume you are given the valid parameters. Alternatively, clarify with the interviewer whether you can assume valid input (usually yes), which can save you time from writing code that does input validation.
+==Always validate input first==. Check for ==invalid/empty/negative/different type== input. Never assume you are given the valid parameters. Alternatively, clarify with the interviewer whether you can assume valid input (usually yes), which can save you time from writing code that does input validation.
 
-Are there any time/space complexity requirements/constraints?
+==Are there any time/space complexity requirements/constraints?==
 
 Check for off-by-one errors.
 
 In languages where there are no automatic type coercion, check that concatenation of values are of the same type: `int`/`str`/`list`.
 
-After finishing your code, use a few example inputs to test your solution.
+==After finishing your code, use a few example inputs to test your solution.==
 
 Is the algorithm meant to be run multiple times, for example in a web server? If yes, the input is likely to be preprocess-able to improve the efficiency in each call.
 
 Use a mix of functional and imperative programming paradigms:
 
-- Write pure functions as much as possible.
+- ==Write pure functions as much as possible.==
 - Pure functions are easier to reason about and can help to reduce bugs in your implementation.
-- Avoid mutating the parameters passed into your function especially if they are passed by reference unless you are sure of what you are doing.
+- ==Avoid mutating the parameters passed into your function especially if they are passed by reference unless you are sure of what you are doing.==
 - However, functional programming is usually expensive in terms of space complexity because of non-mutation and the repeated allocation of new objects. On the other hand, imperative code is faster because you operate on existing objects. Hence you will need to achieve a balance between accuracy vs efficiency, by using the right amount of functional and imperative code where appropriate.
 - Avoid relying on and mutating global variables. Global variables introduce state.
 - If you have to rely on global variables, make sure that you do not mutate it by accident.
 
 Generally, to improve the speed of a program, we can either choose a more appropriate data structure/algorithm or use more memory. It's a classic space/time tradeoff.
 
-Data structures are your weapons. Choosing the right weapon for the right battle is the key to victory. Be very familiar about the strengths of each data structure and the time complexities for its various operations.
+Data structures are your weapons. Choosing the right weapon for the right battle is the key to victory. ==Be very familiar about the strengths of each data structure and the time complexities for its various operations.==
 
-Data structures can be augmented to achieve efficient time complexities across different operations. For example, a hash map can be used together with a doubly-linked list to achieve O(1) time complexity for both the `get` and `put` operation in an [LRU cache](https://leetcode.com/problems/lru-cache/).
+Data structures can be augmented to achieve efficient time complexities across different operations. For example, ==a hash map can be used together with a doubly-linked list to== achieve O(1) time complexity for both the `get` and `put` operation in an [LRU cache](https://leetcode.com/problems/lru-cache/).
 
-Hashmaps are probably the most commonly used data structure for algorithm questions. If you are stuck on a question, your last resort can be to enumerate through the possible data structures (thankfully there aren't that many of them) and consider whether each of them can be applied to the problem. This has worked for me sometimes.
+Hashmaps are probably the most commonly used data structure for algorithm questions. If you are stuck on a question, ==your last resort can be to enumerate through the possible data structures== (thankfully there aren't that many of them) and consider whether each of them can be applied to the problem. This has worked for me sometimes.
 
-If you are cutting corners in your code, state that out loud to your interviewer and say what you would do in a non-interview setting (no time constraints). E.g., I would write a regex to parse this string rather than using `split()` which may not cover all cases.
+==If you are cutting corners in your code, state that out loud to your interviewer and say what you would do in a non-interview setting (no time constraints).== E.g., I would write a regex to parse this string rather than using `split()` which may not cover all cases.
 
 ## Sequence
 
@@ -68,7 +68,7 @@ If you are cutting corners in your code, state that out loud to your interviewer
 
 Arrays and strings are considered sequences (a string is a sequence of characters). There are tips relevant for dealing with both arrays and strings which will be covered here.
 
-Are there duplicate values in the sequence, would it affect the answer?
+==Are there duplicate values in the sequence, would it affect the answer?==
 
 Check for sequence out of bounds.
 
@@ -76,7 +76,7 @@ Be mindful about slicing or concatenating sequences in your code. Typically, sli
 
 Sometimes you can traverse the sequence from the right rather than from the left.
 
-Master the [sliding window technique](https://discuss.leetcode.com/topic/30941/here-is-a-10-line-template-that-can-solve-most-substring-problems) that applies to many substring/subarray problems.
+==Master the [sliding window technique](https://discuss.leetcode.com/topic/30941/here-is-a-10-line-template-that-can-solve-most-substring-problems) that applies to many== substring/subarray problems.
 
 When you are given two sequences to process, it is common to have one index per sequence to traverse/compare the both of them. For example, we use the same approach to merge two sorted arrays.
 
@@ -90,13 +90,13 @@ When you are given two sequences to process, it is common to have one index per 
 
 #### Notes
 
-Is the array sorted or partially sorted? If it is, some form of binary search should be possible. This also usually means that the interviewer is looking for a solution that is faster than O(n).
+==Is the array sorted or partially sorted?== If it is, some form of binary search should be possible. This also usually means that the interviewer is looking for a solution that ==is faster than O(n).==
 
-Can you sort the array? Sometimes sorting the array first may significantly simplify the problem. Make sure that the order of array elements do not need to be preserved before attempting a sort.
+==Can you sort the array?== Sometimes sorting the array first may significantly simplify the problem. Make sure that the order of array elements do not need to be preserved before attempting a sort.
 
-For questions where summation or multiplication of a subarray is involved, pre-computation using hashing or a prefix/suffix sum/product might be useful.
+For questions where summation or multiplication of a subarray is involved, ==pre-computation using hashing or a prefix/suffix sum/product might be useful.==
 
-If you are given a sequence and the interviewer asks for O(1) space, it might be possible to use the array itself as a hash table. For example, if the array only has values from 1 to N, where N is the length of the array, negate the value at that index (minus one) to indicate presence of that number.
+==If you are given a sequence and the interviewer asks for O(1) space, it might be possible to use the array itself as a hash table==. For example, if the array only has values from 1 to N, where N is the length of the array, negate the value at that index (minus one) to indicate presence of that number.
 
 #### Practice Questions
 
@@ -147,7 +147,7 @@ Some helpful utility snippets:
 #### Study Links
 
 - [Demystifying Dynamic Programming](https://medium.freecodecamp.org/demystifying-dynamic-programming-3efafb8d4296)
-- [Dynamic Programming – 7 Steps to Solve any DP Interview Problem](http://blog.refdash.com/dynamic-programming-tutorial-example/)
+- ==[Dynamic Programming – 7 Steps to Solve any DP Interview Problem](http://blog.refdash.com/dynamic-programming-tutorial-example/)==
 
 #### Notes
 
@@ -253,9 +253,9 @@ An example interval array: `[[1, 2], [4, 7]]`.
 
 Interval questions can be tricky to those who have not tried them before because of the sheer number of cases to consider when they overlap.
 
-Do clarify with the interviewer whether `[1, 2]` and `[2, 3]` are considered overlapping intervals as it affects how you will write your equality checks.
+==Do clarify with the interviewer whether `[1, 2]` and `[2, 3]` are considered overlapping intervals as it affects how you will write your equality checks.==
 
-A common routine for interval questions is to sort the array of intervals by each interval's starting value.
+==A common routine for interval questions is to sort the array of intervals by each interval's starting value.==
 
 Be familiar with writing code to check if two intervals overlap and merging two overlapping intervals:
 
@@ -287,7 +287,7 @@ def merge_overlapping_intervals(a, b):
 
 Like arrays, linked lists are used to represent sequential data. The benefit of linked lists is that insertion and deletion from anywhere in the list is O(1) whereas in arrays the following elements will have to be shifted.
 
-Adding a dummy node at the head and/or tail might help to handle many edge cases where operations have to be performed at the head or the tail. The presence of dummy nodes essentially ensures that operations will never have be done on the head or the tail, thereby removing a lot of headache in writing conditional checks to dealing with null pointers. Be sure to remember to remove them at the end of the operation.
+==Adding a dummy node at the head and/or tail might help to handle many edge cases where operations have to be performed at the head or the tail.== The presence of dummy nodes essentially ensures that operations will never have be done on the head or the tail, thereby removing a lot of headache in writing conditional checks to dealing with null pointers. Be sure to remember to remove them at the end of the operation.
 
 Sometimes linked lists problem can be solved without additional storage. Try to borrow ideas from reverse a linked list problem.
 
@@ -297,10 +297,11 @@ For partitioning linked lists, create two separate linked lists and join them ba
 
 Linked lists problems share similarity with array problems, think about how you would do it for an array and try to apply it to a linked list.
 
-Two pointer approaches are also common for linked lists. For example:
-  - Getting the k<sup>th</sup> from last node - Have two pointers, where one is k nodes ahead of the other. When the node ahead reaches the end, the other node is k nodes behind.
-  - Detecting cycles - Have two pointers, where one pointer increments twice as much as the other, if the two pointers meet, means that there is a cycle.
-  - Getting the middle node - Have two pointers, where one pointer increments twice as much as the other. When the faster node reaches the end of the list, the slower node will be at the middle.
+==Two pointer approaches== are also common for linked lists. For example:
+
+  - ==Getting the k<sup>th</sup> from last node== - Have two pointers, where one is k nodes ahead of the other. When the node ahead reaches the end, the other node is k nodes behind.
+  - ==Detecting cycles== - Have two pointers, where one pointer increments twice as much as the other, if the two pointers meet, means that there is a cycle.
+  - ==Getting the middle node== - Have two pointers, where one pointer increments twice as much as the other. When the faster node reaches the end of the list, the slower node will be at the middle.
 
 Be familiar with the following routines because many linked list questions make use of one or more of these routines in the solution:
   - Counting the number of nodes in the linked list.
@@ -312,7 +313,7 @@ Be familiar with the following routines because many linked list questions make 
 
 - Single node.
 - Two nodes.
-- Linked list has cycle. Clarify with the interviewer whether there can be a cycle in the list. Usually the answer is no.
+- Linked list has cycle. ==Clarify with the interviewer whether there can be a cycle in the list==. Usually the answer is no.
 
 #### Practice Questions
 
@@ -329,13 +330,13 @@ Be familiar with the following routines because many linked list questions make 
 
 If code involves division or modulo, remember to check for division or modulo by 0 case.
 
-When a question involves "a multiple of a number", perhaps modulo might be useful.
+When a question involves "==a multiple of a number==", perhaps modulo might be useful.
 
-Check for and handle overflow/underflow if you are using a typed language like Java and C++. At the very least, mention that overflow/underflow is possible and ask whether you need to handle it.
+Check for and handle overflow/underflow if you are using a typed language like Java and C++. ==At the very least, mention that overflow/underflow is possible and ask whether you need to handle it.==
 
-Consider negative numbers and floating point numbers. This may sound obvious, but under interview pressure, many obvious cases go unnoticed.
+Consider ==negative numbers and floating point numbers==. This may sound obvious, but under interview pressure, many obvious cases go unnoticed.
 
-If the question asks to implement an operator such as power, squareroot or division and want it to be faster than O(n), binary search is usually the approach to go.
+If the question asks to implement an operator such as ==power, squareroot or division== and want it to be faster than O(n), ==binary search== is usually the approach to go.
 
 #### Some common formulas:
 
@@ -392,7 +393,9 @@ Recursion is useful for permutation, because it generates all combinations and t
 
 Remember to always define a base case so that your recursion will end.
 
-Recursion implicitly uses a stack. Hence all recursive approaches can be rewritten iteratively using a stack. Beware of cases where the recursion level goes too deep and causes a stack overflow (the default limit in Python is 1000). You may get bonus points for pointing this out to the interviewer. Recursion will never be O(1) space complexity because a stack is involved, unless there is [tail-call optimization](https://stackoverflow.com/questions/310974/what-is-tail-call-optimization) (TCO). Find out if your chosen language supports TCO.
+Recursion implicitly uses a stack. Hence all recursive approaches can be rewritten iteratively using a stack. ==Beware of cases where the recursion level goes too deep and causes a stack overflow== (the default limit in Python is 1000). You may get bonus points for pointing this out to the interviewer. ==Recursion will never be O(1) space complexity because a stack is involved==, unless there is [tail-call optimization](https://stackoverflow.com/questions/310974/what-is-tail-call-optimization) (TCO). Find out if your chosen language supports TCO.
+
+==recursion to stack. [link](https://www.codeproject.com/Articles/418776/How-to-replace-recursive-functions-using-stack-and)== 
 
 #### Practice Questions
 
@@ -409,12 +412,12 @@ Ask about input character set and case sensitivity. Usually the characters are l
 
 When you need to compare strings where the order isn’t important (like anagram), you may consider using a HashMap as a counter. If your language has a built-in Counter class like Python, ask to use that instead.
 
-If you need to keep a counter of characters, a common mistake is to say that the space complexity required for the counter is O(n). The space required for a counter is O(1) not O(n). This is because the upper bound is the range of characters, which is usually a fixed constant of 26. The input set is just lowercase Latin characters.
+==If you need to keep a counter of characters, a common mistake is to say that the space complexity required for the counter is O(n). The space required for a counter is O(1) not O(n). This is because the upper bound is the range of characters, which is usually a fixed constant of 26. The input set is just lowercase Latin characters.==
 
 Common data structures for looking up strings efficiently are
 
-- [Trie / Prefix Tree](https://en.wikipedia.org/wiki/Trie)
-- [Suffix Tree](https://en.wikipedia.org/wiki/Suffix_tree)
+- ==[Trie / Prefix Tree](https://en.wikipedia.org/wiki/Trie)==
+- ==[Suffix Tree](https://en.wikipedia.org/wiki/Suffix_tree)==
 
 Common string algorithms are
 
@@ -443,9 +446,9 @@ An anagram is word switch or word play. It is the result of re-arranging the let
 
 To determine if two strings are anagrams, there are a few plausible approaches:
 
-- Sorting both strings should produce the same resulting string. This takes O(nlgn) time and O(lgn) space.
-- If we map each character to a prime number and we multiply each mapped number together, anagrams should have the same multiple (prime factor decomposition). This takes O(n) time and O(1) space.
-- Frequency counting of characters will help to determine if two strings are anagrams. This also takes O(n) time and O(1) space.
+- ==Sorting both strings should produce the same resulting string. This takes O(nlgn) time and== O(lgn) space.
+- ==If we map each character to a prime number and we multiply each mapped number together==, anagrams should have the same multiple (prime factor decomposition). This takes O(n) time and O(1) space.
+- ==Frequency counting of characters will help to determine if two strings are anagrams. This also takes O(n) time and O(1) space.==
 
 ### Palindrome
 
@@ -458,7 +461,7 @@ Here are ways to determine if a string is a palindrome:
 
 The order of characters within the string matters, so HashMaps are usually not helpful.
 
-When a question is about counting the number of palindromes, a common trick is to have two pointers that move outward, away from the middle. Note that palindromes can be even or odd length. For each middle pivot position, you need to check it twice: Once that includes the character and once without the character.
+==When a question is about counting the number of palindromes, a common trick is to have two pointers that move outward, away from the middle==. Note that palindromes can be even or odd length. For each middle pivot position, you need to check it twice: Once that includes the character and once without the character.
 
 - For substrings, you can terminate early once there is no match.
 - For subsequences, use dynamic programming as there are overlapping subproblems. Check out [this question](https://leetcode.com/problems/longest-palindromic-subsequence/).
@@ -488,15 +491,15 @@ A tree is an undirected and connected acyclic graph.
 
 Recursion is a common approach for trees. When you notice that the subtree problem can be used to solve the entire problem, try using recursion.
 
-When using recursion, always remember to check for the base case, usually where the node is `null`.
+==When using recursion, always remember to check for the base case, usually where the node is `null`.==
 
 When you are asked to traverse a tree by level, use depth first search.
 
 Sometimes it is possible that your recursive function needs to return two values.
 
-If the question involves summation of nodes along the way, be sure to check whether nodes can be negative.
+==If the question involves summation of nodes along the way, be sure to check whether nodes can be negative.==
 
-You should be very familiar with writing pre-order, in-order, and post-order traversal recursively. As an extension, challenge yourself by writing them iteratively. Sometimes interviewers ask candidates for the iterative approach, especially if the candidate finishes writing the recursive approach too quickly.
+You should be very familiar with writing pre-order, in-order, and post-order traversal recursively. ==As an extension, challenge yourself by writing them iteratively==. Sometimes interviewers ask candidates for the iterative approach, especially if the candidate finishes writing the recursive approach too quickly.
 
 
 #### Corner Cases
@@ -512,7 +515,7 @@ In-order traversal of a binary tree is insufficient to uniquely serialize a tree
 
 ### Binary Search Tree (BST)
 
-In-order traversal of a BST will give you all elements in order.
+==In-order traversal of a BST will give you all elements in order.==
 
 Be very familiar with the properties of a BST and validating that a binary tree is a BST. This comes up more often than expected.
 
@@ -561,7 +564,7 @@ Be familiar with implementing, from scratch, a `Trie` class and its `add`, `remo
 
 #### Notes
 
-If you see a top or lowest *k* being mentioned in the question, it is usually a signal that a heap can be used to solve the problem, such as in [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/).
+If you see ==a top or lowest *k* being mentioned== in the question, it is usually a signal that a heap can be used to solve the problem, such as in [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/).
 
 If you require the top *k* elements use a Min Heap of size *k*. Iterate through each element, pushing it into the heap. Whenever the heap size exceeds *k*, remove the minimum element, that will guarantee that you have the *k* largest elements.
 

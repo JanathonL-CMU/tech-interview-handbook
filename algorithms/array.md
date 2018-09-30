@@ -57,3 +57,5 @@
   - [Source](http://blog.gainlo.co/index.php/2017/02/02/uber-interview-questions-longest-increasing-subarray/).
 - ==Given an array of integers where every value appears twice except one, find the single, non-repeating value. Follow up: do so with O(1) space. XOR==
   - ==E.g., `[2, 5, 3, 2, 1, 3, 4, 5, 1]` returns 4, because it is the only value that appears in the array only once.==
+- ==find min dist of two numbers in an arra==y [link](https://www.geeksforgeeks.org/find-the-minimum-distance-between-two-numbers/)
+- 
