@@ -1,3 +1,43 @@
+/*
+bfs(G)
+{
+list L = empty
+tree T = empty
+choose a starting vertex x
+search(x)
+while(L nonempty)
+    remove edge (v,w) from start of L
+    if w not yet visited
+    {
+    add (v,w) to T
+    search(w)
+    }
+}
+
+dfs(G)
+{
+list L = empty
+tree T = empty
+choose a starting vertex x
+search(x)
+while(L nonempty)
+    remove edge (v,w) from end of L
+    if w not yet visited
+    {
+    add (v,w) to T
+    search(w)
+    }
+}
+
+search(vertex v)
+{
+visit(v);
+for each edge (v,w)
+    add edge (v,w) to end of L
+}
+ */
+
+
 //DFS:
 /*
 该DFS 框架以2D 坐标范围为例，来体现DFS 算法的实现思想。

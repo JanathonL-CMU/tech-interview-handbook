@@ -20,7 +20,7 @@
 ```
 
 - Given an array and an index, find the product of the elements of the array except the element at that index.
-- ==Given a set of rectangles represented by a height and an interval along the y-axis, determine the size of its union.==
+- ==Given a set of rectangles represented by a height and an interval along the x-axis, determine the size of its union.==
 - Given 2 separate arrays, write a method to find the values that exist in both arrays and return them.
 - ==Given an array of integers find whether there is a sub-sequence that sums to 0 and return it.==
   - ==E.g. `[1, 2, -3, 1]` => `[1, 2, -3]` or `[2, -3, 1]`.==
@@ -41,8 +41,8 @@
 - Rotate an array by an offset of k.
 - Remove duplicates in an unsorted array where the duplicates are at a distance of k or less from each other.
 - Given an unsorted list of integers, return true if the list contains any duplicates within k indices of each element. Do it faster than O(n^2).
-- ==Given an unsorted list of integers, return true if the list contains any fuzzy duplicates within k indices of each element. A fuzzy duplicate is another integer within d of the original integer. Do it faster than O(n^2).==
-  - ==E.g. If d = 4, then 6 is a fuzzy duplicate of 3 but 8 is not.==
+- Given an unsorted list of integers, return true if the list contains any fuzzy duplicates within k indices of each element. A fuzzy duplicate is another integer within d of the original integer. Do it faster than O(n^2).
+  - E.g. If d = 4, then 6 is a fuzzy duplicate of 3 but 8 is not.
 - ==Say you have an unordered list of numbers ranging from 1 to n, and one of the numbers is removed, how do you find that number? What if two numbers are removed?==
 - ==Given an array of string, find the duplicated elements. If element is too large（external merge sort）==
   - ==[Source](http://blog.gainlo.co/index.php/2016/05/10/duplicate-elements-of-an-array/).==

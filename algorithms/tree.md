@@ -10,27 +10,27 @@ Tree
   - [Source](http://blog.gainlo.co/index.php/2016/06/03/second-largest-element-of-a-binary-search-tree/)
 - Given a binary tree and two nodes, how to find the common ancestor of the two nodes?
   - [Source](http://blog.gainlo.co/index.php/2016/07/06/lowest-common-ancestor/)
-- Find the lowest common ancestor of two nodes in a binary search tree.
+- Find the lowest common ancestor of two nodes in a binary search tree.[link](https://www.geeksforgeeks.org/lowest-common-ancestor-binary-tree-set-1/) 
 - Print the nodes in an n-ary tree level by level, one printed line per level.
 - Given a directory of files and folders (and relevant functions), how would you parse through it to find equivalent files?
-- Write a basic file system and implement the commands ls, pwd, mkdir, create, rm, cd, cat, mv.
+- ==Write a basic file system and implement the commands ls, pwd, mkdir, create, rm, cd, cat, mv.==
 - Compute the intersection of two binary search trees.
-- Given a binary tree, output all the node to leaf paths of it.
+- ==Given a binary tree, output all the node to leaf paths of it.==
 - Given a string of characters without spaces, is there a way to break the string into valid words without leftover characters?
 - Print a binary tree level by level.
-- Determine if a binary tree is "complete" (i.e, if all leaf nodes were either at the maximum depth or max depth-1, and were 'pressed' along the left side of the tree).
-- Find the longest path in a binary tree. The path may start and end at any node.
-- Determine if a binary tree is a BST.
-- Given a binary tree, serialize it into a string. Then deserialize it.
+- ==Determine if a binary tree is "complete" (i.e, if all leaf nodes were either at the maximum depth or max depth-1, and were '==pressed' along the left side of the tree).[link](https://www.geeksforgeeks.org/check-whether-binary-tree-complete-not-set-2-recursive-solution/) 
+- ==Find the longest path in a binary tree. The path may start and end at any node.==
+- ==Determine if a binary tree is a BS==T.[link](https://www.geeksforgeeks.org/a-program-to-check-if-a-binary-tree-is-bst-or-not/) 
+- ==Given a binary tree, serialize it into a string. Then deserialize it==.[link](https://www.geeksforgeeks.org/serialize-deserialize-binary-tree/) 
 - Print a binary tree by column.
-- Given a node, find the next element in a BST.
-- Find the shortest subtree that consist of all the deepest nodes. The tree is not binary.
+- ==Given a node, find the next element in a BST.==[link](https://www.geeksforgeeks.org/inorder-successor-in-binary-search-tree/) 
+- ==Find the shortest subtree that consist of all the deepest nodes. The tree is not binar==y. [link](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/discuss/171875/Beats-100-Postorder-Java-with-Explanations) [link](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/discuss/146971/Logical-Thinking-with-Clear-Java-Code) 
 - Print out the sum of each row in a binary tree.
 - Pretty print a JSON object.
-- Convert a binary tree to a doubly circular linked list.
+- Convert a binary tree to a doubly circular linked list.[link](https://www.geeksforgeeks.org/convert-a-binary-tree-to-a-circular-doubly-link-list/) 
 - Find the second largest number in a binary tree.
 - Given a tree, find the longest branch.
 - Convert a tree to a linked list.
-- Given two trees, write code to find out if tree A is a subtree of tree B.
+- Given two trees, write code to find out if tree A is a subtree of tree B. [link](https://www.geeksforgeeks.org/check-binary-tree-subtree-another-binary-tree-set-2/) 
 - Deepest node in a tree.
   - [Source](http://blog.gainlo.co/index.php/2016/04/26/deepest-node-in-a-tree/)
