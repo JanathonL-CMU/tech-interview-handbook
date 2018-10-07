@@ -1,3 +1,5 @@
+//https://leetcode.com/problems/palindrome-pairs/discuss/79195/O(n-*-k2)-java-solution-with-Trie-structure
+
 // C++ program to check if there is a pair that 
 // of above method using Trie 
 #include<bits/stdc++.h> 
