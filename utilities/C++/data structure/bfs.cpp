@@ -33,23 +33,24 @@ void bfs(State st)
 	while(!q.empty())
 	{
 		now=q.front(); // 取队首元素进行扩展
+		q.pop(); // 队首元素出队
 		if(now==G) // 出现目标态，此时为Step_Counter 的最小值，可以退出即可
 		{
 			...... // 做相关处理
 			return;
 		}
-	for(int i=0;i<4;i++)
-	{
-		next.x=now.x+dir[i][0]; // 按照规则生成	下一个状态
-		next.y=now.y+dir[i][1];
-		next.Step_Counter=now.Step_Counter+1; // 计数器加1
-		if(CheckState(next)) // 如果状态满足约束条件则入队
+		for(int i=0;i<4;i++)
 		{
-			q.push(next);
-			vst[next.x][next.y]=1; //访问标记
+			next.x=now.x+dir[i][0]; // 按照规则生成	下一个状态
+			next.y=now.y+dir[i][1];
+			next.Step_Counter=now.Step_Counter+1; // 计数器加1
+			if(CheckState(next)) // 如果状态满足约束条件则入队
+			{
+				q.push(next);
+				vst[next.x][next.y]=1; //访问标记
+			}
 		}
-	}
-	q.pop(); // 队首元素出队
+		
 	}
  return;
 }
